@@ -1,5 +1,9 @@
 # zamurai &nbsp; [![bluebuild build badge](https://github.com/mboaisha/zamurai/actions/workflows/build.yml/badge.svg)](https://github.com/mboaisha/zamurai/actions/workflows/build.yml)
 
+- An attempting at recreating [bazzirco](https://github.com/bazzirco/bazzirco) using [BlueBuild](https://blue-build.org/learn/getting-started/)
+
+# ** Original Readme below **
+
 See the [BlueBuild docs](https://blue-build.org/how-to/setup/) for quick setup instructions for setting up your own repository based on this template.
 
 After setup, it is recommended you update this README to describe your custom image.
