@@ -1,0 +1,9 @@
+---
+
+## Preinstall flatpaks
+## For now, only Bazaar 
+
+type: default-flatpaks
+system:
+  install:
+    - io.github.kolunmi.Bazaar
