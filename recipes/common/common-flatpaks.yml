@@ -2,8 +2,8 @@
 
 ## Preinstall flatpaks
 ## For now, only Bazaar 
-
+## default-flatpaks modules had a breaking change recently, this is the next version of it
 type: default-flatpaks
-system:
-  install:
+Configurations:
+  - install:
     - io.github.kolunmi.Bazaar
