@@ -8,4 +8,5 @@ modules:
   - from-file: common-flatpaks.yml
   - from-file: common-fonts.yml
   ## Should be the final module to be pulled
-  - from-file: common-cleanup.yml 
+  ## De-referenced for now, testing
+  #- from-file: common-cleanup.yml 
