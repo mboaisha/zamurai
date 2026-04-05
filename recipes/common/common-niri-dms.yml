@@ -1,6 +1,6 @@
 ---
 
-# Install Niri and Dank Material Shell
+# Install and setup Niri and Dank Material Shell
 
 modules:
   - type: dnf
@@ -14,6 +14,14 @@ modules:
       packages:
         - niri
         - dms
+        - greetd
+        - greetd-selinux
+  - type: systemd
+    system:
+      enabled:
+        - greetd.service # Use greetd
+      disable:
+        - sddm.service # Disable sddm since it comes with the bazzite (kde) image
   - type: files
     files:
       - usr: /usr
