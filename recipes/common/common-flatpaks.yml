@@ -4,6 +4,6 @@
 ## For now, only Bazaar 
 ## default-flatpaks modules had a breaking change recently, this is the next version of it
 type: default-flatpaks
-Configurations:
+configurations:
   - install:
-    - io.github.kolunmi.Bazaar
+      - io.github.kolunmi.Bazaar
