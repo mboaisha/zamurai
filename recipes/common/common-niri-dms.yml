@@ -1,0 +1,19 @@
+---
+
+# Install Niri and Dank Material Shell
+
+modules:
+  - type: dnf
+    repos:
+      cleanup: true
+      copr:
+        - yalter/niri-git
+        - avengemedia/dms
+    install:
+      install-weak-deps: false
+      packages:
+        - niri
+        - dms
+  - type: files
+    files:
+      - usr: /usr
