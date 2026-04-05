@@ -27,7 +27,8 @@ jobs:
       matrix:
         recipe:
           # !! Add your recipes here
-          - recipe.yml
+          - recipe-zamurai.yml
+          # TODO: add the other receipes once they are ready 
     steps:
       # the build is fully handled by the reusable github action
       - name: Build Custom Image
