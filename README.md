@@ -1,6 +1,15 @@
 # zamurai &nbsp; [![bluebuild build badge](https://github.com/mboaisha/zamurai/actions/workflows/build.yml/badge.svg)](https://github.com/mboaisha/zamurai/actions/workflows/build.yml)
 
 - An attempting at recreating [bazzirco](https://github.com/bazzirco/bazzirco) using [BlueBuild](https://blue-build.org/learn/getting-started/)
+- Just like in Bazzirco, there is going to be four images in total:
+    - Regular images:
+        - AMD / Intel Image: `zamurai`
+        - Nvidia: `zamurai-nvidia`
+    - Developer Experience (DX) images
+        - AMD / Intel Image: `zamurai-dx`
+        - Nvidia: `zamurai-dx-nvidia`
+## Notes
+- Instead of exclusively offering Niri + DMS as the sole desktop experience, I want to give the user access to KDE as a fallback. This differs from the original Bazzirco / Zirconium approach.
 
 # ** Original Readme below **
 
