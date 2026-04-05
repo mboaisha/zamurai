@@ -1,0 +1,12 @@
+name: zamurai
+description: Zamurai image for non-Nvidia GPUs
+base-image: ghcr.io/ublue-os/bazzite
+image-version: latest
+
+modules:
+  - from-file: common-niri
+  - from-file: common-dms.yml 
+  - from-file: common-flatpaks.yml
+  - from-file: common-fonts.yml
+  ## Should be the final module to be pulled
+  - from-file: common-cleanup.yml 
