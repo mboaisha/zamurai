@@ -1,7 +1,7 @@
 ---
 
 ## Include some assorted fonts
-type:
+type: fonts
 fonts:
   nerd-fonts:
     - FiraCode
