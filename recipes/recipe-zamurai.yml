@@ -4,9 +4,9 @@ base-image: ghcr.io/ublue-os/bazzite
 image-version: latest
 
 modules:
-  - from-file: common-niri-dms.yml
-  - from-file: common-flatpaks.yml
-  - from-file: common-fonts.yml
+  - from-file: common/common-niri-dms.yml
+  - from-file: common/common-flatpaks.yml
+  - from-file: common/common-fonts.yml
   ## Should be the final module to be pulled
   ## De-referenced for now, testing
   #- from-file: common-cleanup.yml 
