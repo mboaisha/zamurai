@@ -1,0 +1,20 @@
+---
+
+## Include some assorted fonts
+type:
+  fonts:
+    nerd-fonts:
+      - FiraCode
+      - FiraMono
+      - GeistMono
+      - Hack
+      - Inconsolata
+      - Iosevka
+      - IosevkaTerm
+      - IosevkaTermSlab
+      - JetBrainsMono
+      - Lilex
+      - RobotoMono
+      - Ubuntu
+      - UbuntuMono
+      - ZedMono
