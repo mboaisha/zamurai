@@ -16,12 +16,16 @@ modules:
         - dms
         - greetd
         - greetd-selinux
+  - type: script
+    scripts:
+      - setup-greetd.sh
   - type: systemd
     system:
       enabled:
         - greetd.service # Use greetd
-      disable:
+      disabled:
         - sddm.service # Disable sddm since it comes with the bazzite (kde) image
   - type: files
     files:
-      - usr: /usr
+      - source: usr
+      - destination: /usr
