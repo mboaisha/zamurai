@@ -10,6 +10,9 @@ modules:
         - yalter/niri-git
         - avengemedia/dms
         - avengemedia/danklinux
+    remove:
+      packages:
+        - sddm
     install:
       install-weak-deps: false
       packages:
@@ -18,9 +21,9 @@ modules:
         - greetd
         - dms-greeter
         - greetd-selinux
-  - type: script
-    scripts:
-      - setup-greetd.sh
+#  - type: script
+#    scripts:
+#      - setup-greetd.sh
   - type: systemd
     system:
       enabled:
