@@ -9,12 +9,14 @@ modules:
       copr:
         - yalter/niri-git
         - avengemedia/dms
+        - avengemedia/danklinux
     install:
       install-weak-deps: false
       packages:
         - niri
         - dms
         - greetd
+        - dms-greeter
         - greetd-selinux
   - type: script
     scripts:

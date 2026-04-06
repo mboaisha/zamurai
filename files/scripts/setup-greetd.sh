@@ -1,12 +1,10 @@
 #!/bin/bash
-
 set -euo pipefail
 
 # Remove SDDM display-manager symlink — blocks greetd.service enable
 rm -f /etc/systemd/system/display-manager.service
 
-# Greeter system user for dms-greeter
-tee /usr/lib/sysusers.d/greeter.conf <<'EOF'
-g greeter 767
-u greeter 767 "Greetd greeter"
-EOF
+# Fix PAM config for gnome-keyring (avoids long login times with fingerprint)
+sed --sandbox -i \
+    -e '/gnome_keyring.so/ s/-auth/auth/ ; /gnome_keyring.so/ s/-session/session/' \
+    /etc/pam.d/greetd
