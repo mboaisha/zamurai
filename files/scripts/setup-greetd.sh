@@ -18,4 +18,4 @@ d /var/lib/greeter 0755 greeter greeter -
 EOF
 
 # SELinux screwing me again
-semanage permissive -a greetd_t 2>/dev/null || true
+semanage permissive -a xdm_t 2>/dev/null || true
