@@ -3,19 +3,19 @@ set -euo pipefail
 
 rm -f /etc/systemd/system/display-manager.service
 
-sed --sandbox -i \
-    -e '/gnome_keyring.so/ s/-auth/auth/ ; /gnome_keyring.so/ s/-session/session/' \
-    /etc/pam.d/greetd
+getent group greeter >/dev/null || groupadd -r greeter
+getent passwd greeter >/dev/null || useradd -r -M -G video,render,greeter -d /var/lib/greeter -s /bin/bash greeter
+usermod -a -G video,render greeter
 
-cat > /usr/lib/sysusers.d/dms-greeter.conf << 'EOF'
-g greeter - "Greeter group"
-u greeter - "System Greeter" /var/lib/greeter /bin/bash
-EOF
+mkdir -p /var/cache/dms-greeter /var/lib/greeter
+chown greeter:greeter /var/cache/dms-greeter /var/lib/greeter
+chmod 0750 /var/cache/dms-greeter
+chmod 0755 /var/lib/greeter
 
-cat > /usr/lib/tmpfiles.d/dms-greeter-dirs.conf << 'EOF'
-d /var/cache/dms-greeter 0750 greeter greeter -
-d /var/lib/greeter 0755 greeter greeter -
-EOF
+if grep -q gnome_keyring.so /etc/pam.d/greetd 2>/dev/null; then
+    sed --sandbox -i \
+        -e '/gnome_keyring.so/ s/-auth/auth/ ; /gnome_keyring.so/ s/-session/session/' \
+        /etc/pam.d/greetd
+fi
 
-# SELinux screwing me again
 semanage permissive -a xdm_t 2>/dev/null || true

@@ -10,9 +10,6 @@ modules:
         - yalter/niri-git
         - avengemedia/dms
         - avengemedia/danklinux
-    remove:
-      packages:
-        - sddm
     install:
       install-weak-deps: false
       packages:
@@ -27,12 +24,14 @@ modules:
   - type: systemd
     system:
       enabled:
-        - greetd.service # Use greetd
+        - greetd.service
       disabled:
-        - sddm.service # Disable sddm since it comes with the bazzite (kde) image
+        - sddm.service
   - type: files
     files:
       - source: usr
         destination: /usr
       - source: system/etc
         destination: /etc
+      - source: system/usr
+        destination: /usr
