@@ -24,9 +24,9 @@ modules:
         - cliphist
         - xwayland-satellite
         - xdg-desktop-portal-gtk
-  - type: script
-    scripts:
-      - setup-greetd.sh
+#  - type: script
+#    scripts:
+#      - setup-greetd.sh
   - type: systemd
     system:
       enabled:
