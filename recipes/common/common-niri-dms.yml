@@ -8,7 +8,7 @@ modules:
       cleanup: true
       copr:
         - yalter/niri-git
-        - avengemedia/dms
+        - avengemedia/dms-git
         - avengemedia/danklinux
     install:
       install-weak-deps: false
@@ -18,9 +18,15 @@ modules:
         - greetd
         - dms-greeter
         - greetd-selinux
-#  - type: script
-#    scripts:
-#      - setup-greetd.sh
+        - quickshell-git
+        - matugen
+        - material-symbols-fonts
+        - cliphist
+        - xwayland-satellite
+        - xdg-desktop-portal-gtk
+  - type: script
+    scripts:
+      - setup-greetd.sh
   - type: systemd
     system:
       enabled:
