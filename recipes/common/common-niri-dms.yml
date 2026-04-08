@@ -16,6 +16,7 @@ modules:
         - niri
         - dms
         - greetd
+        - tuigreet
         #- dms-greeter
         - greetd-selinux
         - quickshell-git
