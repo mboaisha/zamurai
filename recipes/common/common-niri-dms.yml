@@ -31,6 +31,7 @@ modules:
     system:
       enabled:
         - greetd.service
+        - greetd-spawn.service
       disabled:
         - sddm.service
   - type: files
