@@ -33,9 +33,9 @@ modules:
         - greetd.service
       disabled:
         - sddm.service
-#  - type: files
-#    files:
-#      - source: usr
-#        destination: /usr
-#      - source: system/etc
-#        destination: /etc
+  - type: files
+    files:
+      - source: system/usr
+        destination: /usr
+      - source: system/etc
+        destination: /etc
