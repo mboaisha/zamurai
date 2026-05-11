@@ -1,5 +1,4 @@
 ---
-
 # Install and setup Niri and Dank Material Shell
 
 modules:
@@ -7,7 +6,7 @@ modules:
     repos:
       cleanup: true
       copr:
-        - yalter/niri-git
+        #        - yalter/niri-git
         - avengemedia/dms-git
         - avengemedia/danklinux
     install:
@@ -24,9 +23,9 @@ modules:
         - cliphist
         - xwayland-satellite
         - xdg-desktop-portal-gtk
-#  - type: script
-#    scripts:
-#      - setup-greetd.sh
+  #  - type: script
+  #    scripts:
+  #      - setup-greetd.sh
   - type: systemd
     system:
       enabled:
