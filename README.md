@@ -1,6 +1,6 @@
 # zamurai &nbsp; [![bluebuild build badge](https://github.com/mboaisha/zamurai/actions/workflows/build.yml/badge.svg)](https://github.com/mboaisha/zamurai/actions/workflows/build.yml)
 
-- An attempting at recreating [bazzirco](https://github.com/bazzirco/bazzirco) using [BlueBuild](https://blue-build.org/learn/getting-started/)
+- An attempting at recreating [bazzirco](https://github.com/bazzirco/bazzirco) using [BlueBuild](https://blue-build.org/learn/getting-started/) and trying to use Ultramarine Linux bootc images as base
 - Just like in Bazzirco, there is going to be four images in total:
     - Regular images:
         - AMD / Intel Image: `zamurai`
