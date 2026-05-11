@@ -1,6 +1,6 @@
 name: zamurai
 description: Zamurai image for non-Nvidia GPUs
-base-image: base-bootc
+base-image: ghcr.io/ultramarine-linux/base-bootc
 image-version: latest
 
 modules:
