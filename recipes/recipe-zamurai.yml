@@ -1,6 +1,6 @@
 name: zamurai
 description: Zamurai image for non-Nvidia GPUs
-base-image: ghcr.io/ublue-os/bazzite
+base-image: base-bootc
 image-version: latest
 
 modules:
@@ -9,4 +9,4 @@ modules:
   - from-file: common/common-fonts.yml
   ## Should be the final module to be pulled
   ## De-referenced for now, testing
-  #- from-file: common-cleanup.yml 
+  #- from-file: common-cleanup.yml
