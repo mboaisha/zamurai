@@ -1,7 +1,7 @@
 name: zamurai
 description: Zamurai image for non-Nvidia GPUs
-base-image: ghcr.io/ultramarine-linux/base-bootc
-image-version: latest
+base-image: ghcr.io/ublue-os/base-main
+image-version: 44
 
 modules:
   - from-file: common/common-niri-dms.yml
