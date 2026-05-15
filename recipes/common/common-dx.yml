@@ -1,0 +1,36 @@
+---
+# "dx" (developer experience) tweaks
+# What does it include?
+# - VSCodium
+# - Virtualization (libvirt + virt-manager and other goodies)
+# - Podman Desktop (as flatpak)
+# - Devtoolbox flatpak
+# - Distroshelf flatpak
+
+modules:
+  - type: dnf
+    repos:
+      cleanup: true
+      files:
+        - vscodium.repo
+      keys:
+        - https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/raw/master/pub.gpg
+    install:
+      packages:
+        - codium # VSCodium, alternative to VSCode
+    group-install: # Install virtualization tooling
+      with-optional: true
+      packages:
+        - virtualization
+  - type: default-flatpaks
+    configurations:
+      - scope: system
+        notify: true
+        repo:
+          url: https://flathub.org/repo/flathub.flatpakrepo
+          title: Flathub (system)
+        install:
+          - io.podman_desktop.PodmanDesktop # Podman desktop
+          - me.iepure.devtoolbox # useful devtools
+          #- com.github.marhkb.Pods
+          - com.ranfdev.DistroShelf # Mange distrbox via GUI
